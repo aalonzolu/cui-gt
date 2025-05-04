@@ -1,0 +1,25 @@
+{
+  "name": "cui-gt",
+  "version": "0.1.0",
+  "description": "Guatemalan CUI and NIT validators",
+  "keywords": ["guatemala", "cui", "nit", "validation"],
+  "author": "Andrés Alonzo <correo@lexo.dev>",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "require": "./src/index.cjs"
+    }
+  },
+  "main": "./src/index.cjs",
+  "module": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "scripts": {
+    "test": "node --test",
+    "lint": "eslint src"
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0"
+  }
+}

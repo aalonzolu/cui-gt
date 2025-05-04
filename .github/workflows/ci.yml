@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.10", "3.11"]
+        node-version: ["18", "20"]
+    steps:
+      - uses: actions/checkout@v4
+
+      # Python
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install Python deps
+        run: |
+          cd python
+          pip install -e . pytest
+      - name: Run Python tests
+        run: |
+          cd python
+          pytest -q
+
+      # Node
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: npm
+      - name: Install JS deps
+        run: |
+          cd js
+          npm ci
+      - name: Run JS tests
+        run: |
+          cd js
+          npm test
