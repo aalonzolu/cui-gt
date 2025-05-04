@@ -8,7 +8,7 @@ Repo oficial: [https://github.com/aalonzolu/cui-gt](https://github.com/aalonzolu
 
 ## 1 · Instalación rápida
 
-### Python (≥3.9)
+### Python (≥3.8)
 
 ```bash
 pip install cui-gt   # desde PyPI

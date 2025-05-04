@@ -1,7 +1,7 @@
 {
   "name": "cui-gt",
-  "version": "0.1.0",
-  "description": "Guatemalan CUI and NIT validators",
+  "version": "0.2.0",
+  "description": "Validador de CUI de Guatemala",
   "keywords": ["guatemala", "cui", "nit", "validation"],
   "author": "Andrés Alonzo <correo@lexo.dev>",
   "license": "MIT",

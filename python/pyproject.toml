@@ -5,8 +5,8 @@ build-backend = "hatchling.build"
 [project]
 requires-python = ">=3.7"
 name = "cui-gt"
-version = "0.1.0"
-description = "Guatemalan CUI and NIT validators"
+version = "0.2.0"
+description = "Validador de CUI de Guatemala"
 authors = [{name = "Andrés Alonzo", email = "correo@lexo.dev"}]
 readme = "../README.md"
 license = "MIT"
